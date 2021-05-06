@@ -540,5 +540,6 @@
   "ADGERE043_push_title": "{child.nickname} has deducted {formatted_amount} from the piggybank!",
   "ADGERE043_notification_title": "{child.nickname} has deducted {formatted_amount} from the piggybank!",
   "ADPRRE039_notification_title": "It's time to pay out {allowance_frequency} to {child.nickname}!",
-  "ADPRRE039_push_title": "It's time to pay out {allowance_frequency} to {child.nickname}!"
+  "ADPRRE039_push_title": "It's time to pay out {allowance_frequency} to {child.nickname}!",
+  "ADGEON016_add_bonus": "Add a bonus to encourage {child.nickname} to save!"
 }

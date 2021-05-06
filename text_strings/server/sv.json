@@ -540,5 +540,6 @@
   "ADGERE043_push_title": "{child.nickname} har dragit av {formatted_amount} från spargrisen!",
   "ADGERE043_notification_title": "{child.nickname} har dragit av {formatted_amount} från spargrisen!",
   "ADPRRE039_notification_title": "Dags att betala ut {allowance_frequency} till {child.nickname}!",
-  "ADPRRE039_push_title": "Dags att betala ut {allowance_frequency} till {child.nickname}!"
+  "ADPRRE039_push_title": "Dags att betala ut {allowance_frequency} till {child.nickname}!",
+  "ADGEON016_add_bonus": "PLZ_CHECK Add a bonus to encourage {child.nickname} to save!"
 }
