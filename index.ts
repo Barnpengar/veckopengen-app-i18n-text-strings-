@@ -1,15 +1,6 @@
 
 // client
-import sv from './text_strings/client/sv.json'
-import en from './text_strings/client/en.json'
-import no from './text_strings/client/nb.json'
-import da from './text_strings/client/da.json'
-import fr from './text_strings/client/fr.json'
-import nl from './text_strings/client/nl.json'
-import fi from './text_strings/client/fi.json'
-import it from './text_strings/client/it.json'
-import es from './text_strings/client/es.json'
-import de from './text_strings/client/de.json'
+// import sv from './text_strings/client/sv.json'
 import _default from './text_strings/client/default.json'
 
 // school
@@ -170,21 +161,43 @@ export const getEducationStrings = (lang: string) => {
   }
 }
 
+/* eslint-disable no-case-declarations */
 export const getTextStrings = (lang: string) => {
   switch (lang.substring(0, 2)) {
-    case 'sv': return {..._default, ...sv, ...svBot, ...svBotSurvey, ...svEducate, ...svFAQ, ...svSchool} // sweden
+    case 'sv':
+      const sv = require(`./text_strings/client/sv.json`)
+      return {..._default, ...sv, ...svBot, ...svBotSurvey, ...svEducate, ...svFAQ, ...svSchool}
     case 'nb':
-    case 'nn': return {..._default, ...no, ...noBot, ...noBotSurvey, ...noEducate, ...noFAQ, ...noSchool} // norway
-    case 'da': return {..._default, ...da, ...daBot, ...daBotSurvey, ...daEducate, ...daFAQ, ...daSchool} // danish
-    case 'fr': return {..._default, ...fr, ...frBot, ...frBotSurvey, ...frEducate, ...frFAQ, ...frSchool} // france
-    case 'it': return {..._default, ...it, ...itBot, ...itBotSurvey, ...itEducate, ...itFAQ, ...itSchool} // Italian
-    case 'nl': return {..._default, ...nl, ...nlBot, ...nlBotSurvey, ...nlEducate, ...nlFAQ, ...nlSchool} // netherlands
-    case 'fi': return {..._default, ...fi, ...fiBot, ...fiBotSurvey, ...fiEducate, ...fiFAQ, ...fiSchool} // finish
-    case 'es': return {..._default, ...es, ...esBot, ...esBotSurvey, ...esEducate, ...esFAQ, ...esSchool} // spanish
-    case 'de': return {..._default, ...de, ...deBot, ...deBotSurvey, ...deEducate, ...deFAQ, ...deSchool} // german
-    default: return {..._default, ...en, ...enBot, ...enBotSurvey, ...enEducate, ...enFAQ, ...enSchool}
+    case 'nn':
+      const no = require(`./text_strings/client/nb.json`)
+      return {..._default, ...no, ...noBot, ...noBotSurvey, ...noEducate, ...noFAQ, ...noSchool}
+    case 'da':
+      const da = require(`./text_strings/client/da.json`)
+      return {..._default, ...da, ...daBot, ...daBotSurvey, ...daEducate, ...daFAQ, ...daSchool}
+    case 'fr':
+      const fr = require(`./text_strings/client/fr.json`)
+      return {..._default, ...fr, ...frBot, ...frBotSurvey, ...frEducate, ...frFAQ, ...frSchool}
+    case 'it':
+      const it = require(`./text_strings/client/it.json`)
+      return {..._default, ...it, ...itBot, ...itBotSurvey, ...itEducate, ...itFAQ, ...itSchool}
+    case 'nl':
+      const nl = require(`./text_strings/client/nl.json`)
+      return {..._default, ...nl, ...nlBot, ...nlBotSurvey, ...nlEducate, ...nlFAQ, ...nlSchool}
+    case 'fi':
+      const fi = require(`./text_strings/client/fi.json`)
+      return {..._default, ...fi, ...fiBot, ...fiBotSurvey, ...fiEducate, ...fiFAQ, ...fiSchool}
+    case 'es':
+      const es = require(`./text_strings/client/es.json`)
+      return {..._default, ...es, ...esBot, ...esBotSurvey, ...esEducate, ...esFAQ, ...esSchool}
+    case 'de':
+      const de = require(`./text_strings/client/de.json`)
+      return {..._default, ...de, ...deBot, ...deBotSurvey, ...deEducate, ...deFAQ, ...deSchool}
+    default:
+      const en = require(`./text_strings/client/en.json`)
+      return {..._default, ...en, ...enBot, ...enBotSurvey, ...enEducate, ...enFAQ, ...enSchool}
   }
 }
+/* eslint-enable no-case-declarations */
 
 export const getCalendarStrings = (lang: string) => {
   switch (lang.substring(0, 2)) {
@@ -333,22 +346,6 @@ export const applyTransform = (text: string, textTransform: string|undefined = '
     case 'capitalize': return text.charAt(0).toUpperCase() + text.slice(1)
     case 'lowercase': return text.toLowerCase()
     default: return text
-  }
-}
-
-export let getClienStrings = (lang: string) => {
-  switch (lang.substring(0, 2)) {
-    case 'sv': return sv // sweden
-    case 'nb':
-    case 'nn': return no // norway
-    case 'da': return da // danish
-    case 'fr': return fr // france
-    case 'nl': return nl // netherlands
-    case 'fi': return fi // finish
-    case 'it': return it // italian
-    case 'es': return es // spanish
-    case 'de': return de // german
-    default: return en
   }
 }
 
